@@ -12,5 +12,10 @@ post '/cpp' do
 end
 
 post '/*' do
-  "The language you are trying to lint is not installed. Contact the system administrator"
+  missing_language = missing_language_from_url(request.url)
+  "The linter for the language #{missing_language} is not installed. Please, contact the system administrator"
+end
+
+def missing_language_from_url(url)
+  url.split('/').last
 end
