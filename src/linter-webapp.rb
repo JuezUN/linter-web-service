@@ -9,6 +9,12 @@ post '/cpp' do
   response
 end
 
+post "/java" do
+  json = "[{\"from\":{\"line\":0,\"ch\":0,\"sticky\":null},\"to\":{\"line\":1,\"ch\":0,\"sticky\":null},\"severity\":\"warning\",\"message\":\"Package name contains upper case characters\"},{\"from\":{\"line\":5,\"ch\":0,\"sticky\":null},\"to\":{\"line\":6,\"ch\":0,\"sticky\":null},\"severity\":\"warning\",\"message\":\"Avoid unused imports such as 'java.util.Scanner'\"},{\"from\":{\"line\":14,\"ch\":0,\"sticky\":null},\"to\":{\"line\":15,\"ch\":0,\"sticky\":null},\"severity\":\"warning\",\"message\":\"This class has too many methods, consider refactoring it.\"}]"
+  return json
+end
+
+#The remaining not-matched paths will end here
 post '/*' do
   missing_language = missing_language_from_url(request.url)
   "The linter for the language #{missing_language} is not installed. Please, contact the system administrator"
