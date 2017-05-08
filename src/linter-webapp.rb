@@ -1,6 +1,7 @@
 require 'sinatra'
 
 post '/cpp' do
+  cross_origin
   code = params["code"]
   file_absolute_path = next_file_absolute_path + ".cpp"
   write_code_to_file(file_absolute_path, code)
@@ -10,16 +11,22 @@ post '/cpp' do
 end
 
 post "/java" do
+  cross_origin
   json = "[{\"from\":{\"line\":0,\"ch\":0,\"sticky\":null},\"to\":{\"line\":1,\"ch\":0,\"sticky\":null},\"severity\":\"warning\",\"message\":\"Package name contains upper case characters\"},{\"from\":{\"line\":5,\"ch\":0,\"sticky\":null},\"to\":{\"line\":6,\"ch\":0,\"sticky\":null},\"severity\":\"warning\",\"message\":\"Avoid unused imports such as 'java.util.Scanner'\"},{\"from\":{\"line\":14,\"ch\":0,\"sticky\":null},\"to\":{\"line\":15,\"ch\":0,\"sticky\":null},\"severity\":\"warning\",\"message\":\"This class has too many methods, consider refactoring it.\"}]"
   return json
 end
 
 #The remaining not-matched paths will end here
 post '/*' do
+  cross_origin
   missing_language = missing_language_from_url(request.url)
   "The linter for the language #{missing_language} is not installed. Please, contact the system administrator"
 end
 
+
+def cross_origin
+  headers 'Access-Control-Allow-Origin' => '*'
+end
 
 def next_file_absolute_path
   possible_letters = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
