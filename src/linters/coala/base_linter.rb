@@ -10,12 +10,7 @@ module Coala
     def convert_json_from_coala_to_codemirror(coala_json)
       coala_object = JSON.parse(coala_json)
       coala_errors = coala_object["results"]["default"]
-
-      code_mirror_errors = coala_errors.map do |error|
-        code_mirror_error_from_coala_error(error)
-      end
-
-      code_mirror_errors.to_json
+      coala_errors.map{ |error| mirror_error_from_coala_error(error) }.to_json
     end
 
     def results
@@ -24,7 +19,7 @@ module Coala
 
     private
 
-    def code_mirror_error_from_coala_error(coala_error)
+    def mirror_error_from_coala_error(coala_error)
       code_mirror_error = {}
       code_mirror_error["severity"] = code_mirror_severity(coala_error)
       code_mirror_error["from"] = starting_position(coala_error)
@@ -51,9 +46,9 @@ module Coala
       start = error["affected_code"][0]["start"]
       ending = error["affected_code"][0]["end"]
 
-      error_is_in_the_whole_line = ending["column"] == nil && start["column"] == nil
+      whole_line_error = ending["column"] == nil && start["column"] == nil
 
-      if error_is_in_the_whole_line
+      if whole_line_error
         to["line"] = ending["line"]
         to["ch"] = 0
       else
