@@ -25,6 +25,9 @@ describe Coala do
     code_mirror_errors = JSON.parse(code_mirror_json)
     expect(code_mirror_errors[0]["severity"]).to eq "warning"
     expect(code_mirror_errors[21]["severity"]).to eq "warning"
+    expect(code_mirror_errors[22]["severity"]).to eq "error"
+    expect(code_mirror_errors[6]["severity"]).to eq "error"
+
   end
 
   it "gets the correct starting error position" do

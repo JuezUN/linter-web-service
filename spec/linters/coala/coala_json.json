@@ -195,7 +195,7 @@
         "message_arguments": {},
         "message_base": "Avoid variables with short names like f",
         "origin": "JavaPMDBear",
-        "severity": 1
+        "severity": 2
       },
       {
         "additional_info": "",
@@ -643,7 +643,7 @@
         "message_arguments": {},
         "message_base": "Avoid variables with short names like a",
         "origin": "JavaPMDBear",
-        "severity": 1
+        "severity": 2
       },
       {
         "additional_info": "",

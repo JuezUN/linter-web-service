@@ -29,6 +29,7 @@ module Coala
     end
 
     def severity(error)
+      return "error" if error["severity"] >= 2
       "warning"
     end
 
