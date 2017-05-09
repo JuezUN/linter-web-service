@@ -1,12 +1,10 @@
-require_relative "../src/base_linter"
-require 'rspec'
-require 'json'
+require_relative "../../spec_helper"
 
 describe Coala do
 
   before do
     @base_linter = Coala::BaseLinter.new
-    @coala_json = File.read('spec/coala_json.json')
+    @coala_json = File.read('spec/linters/coala/coala_json.json')
   end
 
   it "gets the correct number of errors and warnings" do

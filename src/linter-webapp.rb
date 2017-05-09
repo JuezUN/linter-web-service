@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative 'java_linter'
+require_relative 'linters/coala/java_linter'
 
 post '/cpp' do
   cross_origin
