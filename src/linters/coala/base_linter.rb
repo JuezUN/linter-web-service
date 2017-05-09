@@ -12,12 +12,7 @@ module Coala
       coala_errors = coala_object["results"]["default"]
 
       code_mirror_errors = coala_errors.map do |error|
-        code_mirror_error = {}
-        code_mirror_error["severity"] = code_mirror_severity(error["severity"])
-        code_mirror_error["from"] = starting_position(error)
-        code_mirror_error["to"] = ending_position(error)
-        code_mirror_error["message"] = error["message"]
-        code_mirror_error
+        code_mirror_error_from_coala_error(error)
       end
 
       code_mirror_errors.to_json
@@ -28,7 +23,17 @@ module Coala
     end
 
     private
-    def code_mirror_severity(severity)
+
+    def code_mirror_error_from_coala_error(coala_error)
+      code_mirror_error = {}
+      code_mirror_error["severity"] = code_mirror_severity(coala_error)
+      code_mirror_error["from"] = starting_position(coala_error)
+      code_mirror_error["to"] = ending_position(coala_error)
+      code_mirror_error["message"] = coala_error["message"]
+      code_mirror_error
+    end
+
+    def code_mirror_severity(error)
       "warning"
     end
 
