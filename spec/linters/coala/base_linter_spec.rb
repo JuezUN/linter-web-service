@@ -48,4 +48,19 @@ describe Coala do
     expect(code_mirror_errors[23]["to"]).to eq ({"line" => 201, "ch" => 23, "sticky" => nil})
   end
 
+  context "with not null columns" do
+    before do
+      @coala_json = File.read("spec/linters/coala/not_null_columns.json")
+    end
+
+    it "columns are never negative" do
+      code_mirror_json = @base_linter.convert_json_from_coala_to_codemirror(@coala_json)
+      code_mirror_errors = JSON.parse(code_mirror_json)
+
+      not_negative = code_mirror_errors.all? do |error|
+        error["from"]["ch"] >= 0 && error["to"]["ch"] >= 0
+      end
+      expect(not_negative).to eq (true)
+    end
+  end
 end

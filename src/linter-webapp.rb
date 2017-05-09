@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative 'linters/coala/java_linter'
+require_relative 'linters/coala/python_linter'
 
 post '/cpp' do
   cross_origin
@@ -17,6 +18,16 @@ post "/java" do
   file_absolute_path = next_file_absolute_path + ".java"
   write_code_to_file(file_absolute_path, code)
   response = Coala::JavaLinter.new(file_absolute_path).results
+  erase_file(file_absolute_path)
+  response
+end
+
+post '/python' do
+  cross_origin
+  code = params["code"]
+  file_absolute_path = next_file_absolute_path + ".py"
+  write_code_to_file(file_absolute_path, code)
+  response = Coala::PythonLinter.new(file_absolute_path).results
   erase_file(file_absolute_path)
   response
 end

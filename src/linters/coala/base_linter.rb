@@ -21,14 +21,14 @@ module Coala
 
     def mirror_error_from_coala_error(coala_error)
       code_mirror_error = {}
-      code_mirror_error["severity"] = code_mirror_severity(coala_error)
+      code_mirror_error["severity"] = severity(coala_error)
       code_mirror_error["from"] = starting_position(coala_error)
       code_mirror_error["to"] = ending_position(coala_error)
       code_mirror_error["message"] = coala_error["message"]
       code_mirror_error
     end
 
-    def code_mirror_severity(error)
+    def severity(error)
       "warning"
     end
 
@@ -36,29 +36,37 @@ module Coala
       from = {}
       start = error["affected_code"][0]["start"]
       from["line"] = start["line"] - 1
-      from["ch"] = (start["column"] == nil ? 0 : start["column"] - 1)
+      from["ch"] = column_from_position(start)
       from["sticky"] = nil
       from
     end
 
     def ending_position(error)
       to = {}
-      start = error["affected_code"][0]["start"]
       ending = error["affected_code"][0]["end"]
 
-      whole_line_error = ending["column"] == nil && start["column"] == nil
-
-      if whole_line_error
+      if whole_line_error(error)
         to["line"] = ending["line"]
         to["ch"] = 0
       else
         to["line"] = ending["line"] - 1
-        to["ch"] = (ending["column"] == nil ? 0 : ending["column"] - 1)
+        to["ch"] = column_from_position(ending)
       end
 
       to["sticky"] = nil
       to
     end
-  end
 
+    def whole_line_error(error)
+      start = error["affected_code"][0]["start"]
+      ending = error["affected_code"][0]["end"]
+      ending["column"] == nil && start["column"] == nil
+    end
+
+    def column_from_position(position)
+      return 0 unless position
+      return 0 if position["column"] == nil || position["column"] <= 0
+      position["column"] - 1
+    end
+  end
 end

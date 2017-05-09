@@ -1,0 +1,398 @@
+{
+  "results": {
+    "default": [
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 37
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 37
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 328379430714598705178975562995100383873,
+        "message": "C0326 - Exactly one space required around keyword argument assignment",
+        "message_arguments": {},
+        "message_base": "C0326 - Exactly one space required around keyword argument assignment",
+        "origin": "PyLintBear (C0326)",
+        "severity": 0
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 38
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 38
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 257807146613051622694096266825141634234,
+        "message": "C0326 - Exactly one space required around keyword argument assignment",
+        "message_arguments": {},
+        "message_base": "C0326 - Exactly one space required around keyword argument assignment",
+        "origin": "PyLintBear (C0326)",
+        "severity": 0
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 1
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 1
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 128271912684155578529091799332648193082,
+        "message": "C0111 - Missing module docstring",
+        "message_arguments": {},
+        "message_base": "C0111 - Missing module docstring",
+        "origin": "PyLintBear (C0111)",
+        "severity": 0
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 14
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 14
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 102577086870352488769480806525713758878,
+        "message": "E1101 - Class 'Enum' has no 'MAJOR' member",
+        "message_arguments": {},
+        "message_base": "E1101 - Class 'Enum' has no 'MAJOR' member",
+        "origin": "PyLintBear (E1101)",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 15
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 15
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 118720138453606234212165863162471932064,
+        "message": "E1101 - Class 'Enum' has no 'MAJOR' member",
+        "message_arguments": {},
+        "message_base": "E1101 - Class 'Enum' has no 'MAJOR' member",
+        "origin": "PyLintBear (E1101)",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 16
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 16
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 182493957351708391300670213746068212488,
+        "message": "E1101 - Class 'Enum' has no 'NORMAL' member",
+        "message_arguments": {},
+        "message_base": "E1101 - Class 'Enum' has no 'NORMAL' member",
+        "origin": "PyLintBear (E1101)",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 17
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 17
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 291487178426269485311390601147009293146,
+        "message": "E1101 - Class 'Enum' has no 'INFO' member",
+        "message_arguments": {},
+        "message_base": "E1101 - Class 'Enum' has no 'INFO' member",
+        "origin": "PyLintBear (E1101)",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 18
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 18
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 33366692879011280945012195580326215257,
+        "message": "E1101 - Class 'Enum' has no 'INFO' member",
+        "message_arguments": {},
+        "message_base": "E1101 - Class 'Enum' has no 'INFO' member",
+        "origin": "PyLintBear (E1101)",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 19
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 27,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 19
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 27180844287310422027821058483095825,
+        "message": "E1101 - Class 'Enum' has no 'INFO' member",
+        "message_arguments": {},
+        "message_base": "E1101 - Class 'Enum' has no 'INFO' member",
+        "origin": "PyLintBear (E1101)",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 4,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 34
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 4,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 34
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 143973803457894339351019521319984972296,
+        "message": "R0913 - Too many arguments (7/5)",
+        "message_arguments": {},
+        "message_base": "R0913 - Too many arguments (7/5)",
+        "origin": "PyLintBear (R0913)",
+        "severity": 0
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 35,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 34
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 35,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 34
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 264718929252338883893331344903464832774,
+        "message": "W0613 - Unused argument 'file'",
+        "message_arguments": {},
+        "message_base": "W0613 - Unused argument 'file'",
+        "origin": "PyLintBear (W0613)",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 41,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 34
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 41,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 34
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 132427801845790879828763551484266576267,
+        "message": "W0613 - Unused argument 'config_file'",
+        "message_arguments": {},
+        "message_base": "W0613 - Unused argument 'config_file'",
+        "origin": "PyLintBear (W0613)",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 10
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 10
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 135990990328075390357736880052272645634,
+        "message": "R0903 - Too few public methods (1/2)",
+        "message_arguments": {},
+        "message_base": "R0903 - Too few public methods (1/2)",
+        "origin": "PyLintBear (R0903)",
+        "severity": 0
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 6
+            },
+            "file": "/home/mauricio/test-coala/p.py",
+            "start": {
+              "column": 0,
+              "file": "/home/mauricio/test-coala/p.py",
+              "line": 6
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 179872155286265362826217161278290680539,
+        "message": "C0412 - Imports from package coalib are not grouped",
+        "message_arguments": {},
+        "message_base": "C0412 - Imports from package coalib are not grouped",
+        "origin": "PyLintBear (C0412)",
+        "severity": 0
+      }
+    ]
+  }
+}
