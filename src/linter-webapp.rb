@@ -1,15 +1,11 @@
 require 'sinatra'
 require_relative 'linters/coala/java_linter'
 require_relative 'linters/coala/python_linter'
+require_relative 'linters/cpp_linter'
 
 post '/cpp' do
   cross_origin
-  code = params["code"]
-  file_absolute_path = next_file_absolute_path + ".cpp"
-  write_code_to_file(file_absolute_path, code)
-  response = `/home/mauricio/linters/hw/bin/oclint-0.12 -report-type html #{file_absolute_path} -- -c -enable-clang-static-analyzer`
-  erase_file(file_absolute_path)
-  response
+  Oclint::CppLinter.new(params["code"]).perform_lint
 end
 
 post "/java" do
