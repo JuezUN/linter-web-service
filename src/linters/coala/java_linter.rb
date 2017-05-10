@@ -6,5 +6,9 @@ module Coala
       json_coala = `coala -I --files #{@file_absolute_path} --bears JavaPMDBear --json`
       convert_json_from_coala_to_codemirror(json_coala)
     end
+
+    def extention
+      ".java"
+    end
   end
 end

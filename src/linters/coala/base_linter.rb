@@ -1,20 +1,12 @@
 require 'json'
+require_relative '../abstract_linter'
 
 module Coala
-  class BaseLinter
-
-    def initialize(file_absolute_path = "")
-      @file_absolute_path = file_absolute_path
-    end
-
+  class BaseLinter < AbstractLinter
     def convert_json_from_coala_to_codemirror(coala_json)
       coala_object = JSON.parse(coala_json)
       coala_errors = coala_object["results"]["default"]
       coala_errors.map{ |error| mirror_error_from_coala_error(error) }.to_json
-    end
-
-    def results
-      []
     end
 
     private

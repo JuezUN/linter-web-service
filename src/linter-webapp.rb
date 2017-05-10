@@ -14,22 +14,12 @@ end
 
 post "/java" do
   cross_origin
-  code = params["code"]
-  file_absolute_path = next_file_absolute_path + ".java"
-  write_code_to_file(file_absolute_path, code)
-  response = Coala::JavaLinter.new(file_absolute_path).results
-  erase_file(file_absolute_path)
-  response
+  Coala::JavaLinter.new(params["code"]).perform_lint
 end
 
 post '/python' do
   cross_origin
-  code = params["code"]
-  file_absolute_path = next_file_absolute_path + ".py"
-  write_code_to_file(file_absolute_path, code)
-  response = Coala::PythonLinter.new(file_absolute_path).results
-  erase_file(file_absolute_path)
-  response
+  Coala::PythonLinter.new(params["code"]).perform_lint
 end
 
 #The remaining not-matched paths will end here
@@ -41,22 +31,6 @@ end
 
 def cross_origin
   headers 'Access-Control-Allow-Origin' => '*'
-end
-
-def next_file_absolute_path
-  possible_letters = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
-  random_string = (0..10).map { possible_letters[rand(possible_letters.size)] }.join
-  "/home/mauricio/linter-web/codes/#{random_string}"
-end
-
-def write_code_to_file(file_absolute_path, code)
-  File.open(file_absolute_path, "w") do |f|
-    f.write code
-  end
-end
-
-def erase_file(file_absolute_path)
-  File.delete(file_absolute_path)
 end
 
 def missing_language_from_url(url)
