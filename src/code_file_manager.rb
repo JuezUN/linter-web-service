@@ -2,7 +2,7 @@ module CodeFileManager
   def next_file_absolute_path
     possible_letters = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
     random_string = (0..10).map { possible_letters[rand(possible_letters.size)] }.join
-    "/home/mauricio/linter-web/codes/#{random_string}"
+    "#{Dir.pwd}/codes/#{random_string}"
   end
 
   def write_code_to_file(file_absolute_path, code)
