@@ -1,5 +1,37 @@
 require 'json'
 
+#Codemirror json example:
+# [
+#   {
+#     "severity": "warning",
+#     "from": {
+#       "line": 0,
+#       "ch": 0,
+#       "sticky": null
+#     },
+#     "to": {
+#       "line": 1,
+#       "ch": 0,
+#       "sticky": null
+#     },
+#     "message": "Package name contains upper case characters"
+#   },
+#   {
+#     "severity": "warning",
+#     "from": {
+#       "line": 5,
+#       "ch": 0,
+#       "sticky": null
+#     },
+#     "to": {
+#       "line": 6,
+#       "ch": 0,
+#       "sticky": null
+#     },
+#     "message": "Avoid unused imports such as 'java.util.Scanner'"
+#   }
+# ]
+
 module Coala
   class JsonConverter
     def self.convert_json_from_coala_to_codemirror(coala_json)
