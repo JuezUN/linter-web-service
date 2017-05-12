@@ -1,8 +1,9 @@
+require 'tempfile'
+
 module CodeFileManager
-  def next_file_absolute_path
-    possible_letters = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
-    random_string = (0..10).map { possible_letters[rand(possible_letters.size)] }.join
-    "#{Dir.pwd}/codes/#{random_string}"
+  def next_file_absolute_path(extension)
+    tempfile = Tempfile.create(['foo', extension], "#{Dir.pwd}/codes")
+    tempfile.path
   end
 
   def write_code_to_file(file_absolute_path, code)
