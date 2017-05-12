@@ -6,7 +6,7 @@ module Oclint
       `oclint-0.12 -report-type json #{@file_absolute_path} -- -c -enable-clang-static-analyzer`
     end
 
-    def extention
+    def extension
       ".cpp"
     end
   end

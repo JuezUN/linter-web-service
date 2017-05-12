@@ -8,7 +8,7 @@ module Coala
       Coala::JsonConverter.convert_json_from_coala_to_codemirror(json_coala)
     end
 
-    def extention
+    def extension
       ".py"
     end
   end

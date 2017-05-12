@@ -4,7 +4,7 @@ class AbstractLinter
   include(CodeFileManager)
 
   def initialize(code="")
-    @file_absolute_path = next_file_absolute_path + extention
+    @file_absolute_path = next_file_absolute_path + extension
     @code = code
   end
 
@@ -19,7 +19,7 @@ class AbstractLinter
     []
   end
 
-  def extention
+  def extension
     ".txt"
   end
 end
