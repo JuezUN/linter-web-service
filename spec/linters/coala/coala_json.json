@@ -1,0 +1,678 @@
+{
+  "results": {
+    "default": [
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 1
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 1
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 303170343276021646516440490283226025081,
+        "message": "Package name contains upper case characters",
+        "message_arguments": {},
+        "message_base": "Package name contains upper case characters",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 6
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 6
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 60387109544311394971845553525609309912,
+        "message": "Avoid unused imports such as 'java.util.Scanner'",
+        "message_arguments": {},
+        "message_base": "Avoid unused imports such as 'java.util.Scanner'",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 8
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 8
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 275738790522578282279237633328024605999,
+        "message": "Avoid unused imports such as 'java.awt.Color'",
+        "message_arguments": {},
+        "message_base": "Avoid unused imports such as 'java.awt.Color'",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 15
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 15
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 261281692737670526437675640915187980400,
+        "message": "This class has too many methods, consider refactoring it.",
+        "message_arguments": {},
+        "message_base": "This class has too many methods, consider refactoring it.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 23
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 23
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 234549017301139498694377508957919932367,
+        "message": "Avoid variables with short names like k",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like k",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 23
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 23
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 136070359903728771666889690326587970089,
+        "message": "Avoid variables with short names like n",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like n",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 30
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 30
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 332991290814740342593462229046029124996,
+        "message": "Avoid variables with short names like f",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like f",
+        "origin": "JavaPMDBear",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 40
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 40
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 3261296029007600392208994292675172415,
+        "message": "Avoid variables with short names like i",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like i",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 40
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 40
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 72097008396728070398726585796603490780,
+        "message": "Avoid variables with short names like j",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like j",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 44
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 44
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 292872767256833994727596149324640316635,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 48
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 48
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 87764859236730878881788460006363503812,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 77
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 77
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 163372838312505783779580211153253995178,
+        "message": "Avoid variables with short names like sb",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like sb",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 90
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 90
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 133088043291490856818307857771961134366,
+        "message": "Avoid variables with short names like x",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like x",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 96
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 96
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 153340784606895003429031309022116037802,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 108
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 108
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 206948479990218898273794520280406695936,
+        "message": "Avoid variables with short names like c",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like c",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 112
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 112
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 158799570334861449452423452899429459678,
+        "message": "Avoid variables with short names like a",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like a",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 112
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 112
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 250793026879898392808810139647954000841,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 125
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 125
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 49932090144632704321057094480174670101,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 133
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 133
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 81745611568958925859657897593936540243,
+        "message": "Avoid variables with short names like f",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like f",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 168
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 168
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 269184530041741064442365903082959414943,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 182
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 182
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 198894666308930656133632149871254913502,
+        "message": "Avoid using if statements without curly braces",
+        "message_arguments": {},
+        "message_base": "Avoid using if statements without curly braces",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 192
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 192
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 314963061493555627788454977242397873370,
+        "message": "Avoid variables with short names like c",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like c",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 202
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": null,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 202
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 10756440298078077209387281729651456449,
+        "message": "Avoid variables with short names like a",
+        "message_arguments": {},
+        "message_base": "Avoid variables with short names like a",
+        "origin": "JavaPMDBear",
+        "severity": 2
+      },
+      {
+        "additional_info": "",
+        "affected_code": [
+          {
+            "end": {
+              "column": 24,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 202
+            },
+            "file": "/home/mauricio/test-coala/ReadImage.java",
+            "start": {
+              "column": 2,
+              "file": "/home/mauricio/test-coala/ReadImage.java",
+              "line": 202
+            }
+          }
+        ],
+        "aspect": "NoneType",
+        "confidence": 100,
+        "debug_msg": "",
+        "diffs": null,
+        "id": 320881794439307736380298278827888784159,
+        "message": "Useless parentheses.",
+        "message_arguments": {},
+        "message_base": "Useless parentheses.",
+        "origin": "JavaPMDBear",
+        "severity": 1
+      }
+    ]
+  }
+}

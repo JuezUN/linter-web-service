@@ -1,34 +1,32 @@
 require 'sinatra'
+require_relative 'linters/coala/java_linter'
+require_relative 'linters/coala/python_linter'
+require_relative 'linters/cpp_linter'
 
-post '/cpp' do
-  code = params["code"]
-  file_absolute_path = next_file_absolute_path + ".cpp"
-  write_code_to_file(file_absolute_path, code)
-  response = `/home/mauricio/linters/hw/bin/oclint-0.12 -report-type html #{file_absolute_path} -- -c -enable-clang-static-analyzer`
-  erase_file(file_absolute_path)
-  response
+before do
+  cross_origin
 end
 
+post '/cpp' do
+  Oclint::CppLinter.new(params["code"]).perform_lint
+end
+
+post "/java" do
+  Coala::JavaLinter.new(params["code"]).perform_lint
+end
+
+post '/python' do
+  Coala::PythonLinter.new(params["code"]).perform_lint
+end
+
+#The remaining not-matched paths will end here
 post '/*' do
   missing_language = missing_language_from_url(request.url)
   "The linter for the language #{missing_language} is not installed. Please, contact the system administrator"
 end
 
-
-def next_file_absolute_path
-  possible_letters = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
-  random_string = (0..10).map { possible_letters[rand(possible_letters.size)] }.join
-  "/home/mauricio/linter-web/codes/#{random_string}"
-end
-
-def write_code_to_file(file_absolute_path, code)
-  File.open(file_absolute_path, "w") do |f|
-    f.write code
-  end
-end
-
-def erase_file(file_absolute_path)
-  File.delete(file_absolute_path)
+def cross_origin
+  headers 'Access-Control-Allow-Origin' => '*'
 end
 
 def missing_language_from_url(url)
