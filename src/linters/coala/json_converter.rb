@@ -36,7 +36,7 @@ module Coala
   class JsonConverter
     def self.convert_json_from_coala_to_codemirror(coala_json)
       coala_object = JSON.parse(coala_json)
-      coala_errors = coala_object["results"]["default"]
+      coala_errors = coala_object["results"]["cli"]
       coala_errors.map{ |error| mirror_error_from_coala_error(error) }.to_json
     end
 
