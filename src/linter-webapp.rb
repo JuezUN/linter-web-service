@@ -1,14 +1,14 @@
 require 'sinatra'
 require_relative 'linters/coala/java_linter'
 require_relative 'linters/coala/python_linter'
-require_relative 'linters/cpp_linter'
+require_relative 'linters/coala/cpp_linter'
 
 before do
   cross_origin
 end
 
 post '/cpp' do
-  Oclint::CppLinter.new(params["code"]).perform_lint
+  Coala::CppLinter.new(params["code"]).perform_lint
 end
 
 post "/java" do
