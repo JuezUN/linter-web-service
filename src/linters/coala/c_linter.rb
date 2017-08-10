@@ -1,7 +1,7 @@
-require_relative "cpp_linter"
+require_relative "oclinter"
 
 module Coala
-  class CLinter < CppLinter
+  class CLinter < OcLinter
     def extension
       ".c"
     end
