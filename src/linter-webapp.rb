@@ -2,6 +2,8 @@ require 'sinatra'
 require_relative 'linters/coala/java_linter'
 require_relative 'linters/coala/python_linter'
 require_relative 'linters/coala/cpp_linter'
+require_relative 'linters/coala/c_linter'
+
 
 before do
   cross_origin
@@ -17,6 +19,10 @@ end
 
 post '/python' do
   Coala::PythonLinter.new(params["code"]).perform_lint
+end
+
+post '/c' do
+  Coala::CLinter.new(params["code"]).perform_lint
 end
 
 #The remaining not-matched paths will end here
