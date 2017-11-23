@@ -79,7 +79,7 @@ RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.8.1/pmd-b
     && unzip pmd-bin-5.8.1.zip && alias pmd="/pmd-bin-5.8.1/bin/run.sh pmd"
 
 #install c++ oclinter (coala dependency)
-RUN wget https://github.com/oclint/oclint/releases/download/v0.12/oclint-0.12-x86_64-darwin-16.5.0.tar.gz \
+RUN wget https://github.com/oclint/oclint/releases/download/v0.12/oclint-0.12-x86_64-darwin-16.5.0.tar.gz \ 
     && mkdir oclint-release \
     && tar xf oclint-0.12-x86_64-darwin-16.5.0.tar.gz -C oclint-release --strip-components 1 \
     && export OCLINT_HOME=/oclint-release \
