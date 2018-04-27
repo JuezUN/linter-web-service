@@ -75,15 +75,45 @@ RUN mkdir -p "$GEM_HOME" "$BUNDLE_BIN" \
 
 #install pmd java linter (coala dependency)
 
-RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.8.1/pmd-bin-5.8.1.zip \
-    && unzip pmd-bin-5.8.1.zip && alias pmd="/pmd-bin-5.8.1/bin/run.sh pmd"
+RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.2.0/pmd-bin-6.2.0.zip 
+RUN unzip pmd-bin-6.2.0.zip 
 
-#install c++ oclinter (coala dependency)
-RUN wget https://github.com/oclint/oclint/releases/download/v0.12/oclint-0.12-x86_64-darwin-16.5.0.tar.gz \ 
-    && mkdir oclint-release \
-    && tar xf oclint-0.12-x86_64-darwin-16.5.0.tar.gz -C oclint-release --strip-components 1 \
-    && export OCLINT_HOME=/oclint-release \
-    && export PATH=$OCLINT_HOME/bin:$PATH
+RUN echo 'alias pmd="/pmd-bin-6.2.0/bin/run.sh pmd"' >> ~/.bashrc
+
+# add webupd8 repository
+RUN \
+    echo "===> add webupd8 repository..."  && \
+    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list  && \
+    echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list  && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886  && \
+    apt-get update  && \
+    \
+    \
+    echo "===> install Java"  && \
+    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections  && \
+    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections  && \
+    DEBIAN_FRONTEND=noninteractive  apt-get install -y --force-yes oracle-java8-installer oracle-java8-set-default  && \
+    \
+    \
+    echo "===> clean up..."  && \
+    rm -rf /var/cache/oracle-jdk8-installer  && \
+    apt-get clean  && \
+    rm -rf /var/lib/apt/lists/*
+
+
+# install c++ oclinter (coala dependency)
+#RUN apt-get install subversion git cmake lcov libssl-dev
+RUN wget https://github.com/oclint/oclint/releases/download/v0.12/oclint-0.12-x86_64-linux-3.13.0-112-generic.tar.gz 
+RUN mkdir oclint-release 
+RUN tar xf oclint-0.12-x86_64-linux-3.13.0-112-generic.tar.gz -C oclint-release --strip-components 1 
+ENV OCLINT_HOME /oclint-release 
+RUN echo 'PATH=$OCLINT_HOME/bin:$PATH' >> ~/.bashrc
+RUN apt-get update
+RUN apt-get install -y software-properties-common python-software-properties
+RUN echo 'deb http://ftp.us.debian.org/debian unstable main contrib non-free' >> /etc/apt/sources.list.d/unstable.list
+RUN apt-get update
+RUN apt-get install -y -t unstable gcc-5
+
 
 WORKDIR /usr/src/app
 
@@ -92,7 +122,7 @@ RUN gem install bundler
 COPY . .
 
 #install coala bears dependencies
-RUN pip3 install git+https://github.com/JuezUN/coala-bears.git
+RUN pip3 install git+https://github.com/JuezUN/coala-bears.git --no-cache-dir
 
 EXPOSE 4567
 
