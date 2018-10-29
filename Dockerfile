@@ -129,4 +129,4 @@ EXPOSE 4567
 
 RUN bundler install
 
-#CMD ["ruby", "src/linter-webapp.rb", "-o", "0.0.0.0"]
+CMD ["ruby", "src/linter-webapp.rb", "-o", "0.0.0.0", "-p", "4568"]
