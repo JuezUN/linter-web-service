@@ -113,6 +113,7 @@ RUN apt-get install -y software-properties-common python-software-properties
 RUN echo 'deb http://ftp.us.debian.org/debian unstable main contrib non-free' >> /etc/apt/sources.list.d/unstable.list
 RUN apt-get update
 RUN apt-get install -y -t unstable gcc-5
+RUN apt-get install -y clang
 
 
 WORKDIR /usr/src/app
