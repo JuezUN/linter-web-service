@@ -107,7 +107,7 @@ RUN wget https://github.com/oclint/oclint/releases/download/v0.12/oclint-0.12-x8
 RUN mkdir oclint-release 
 RUN tar xf oclint-0.12-x86_64-linux-3.13.0-112-generic.tar.gz -C oclint-release --strip-components 1 
 ENV OCLINT_HOME /oclint-release
-ENV PATH $OCLINT_HOME:$PATH
+ENV PATH $OCLINT_HOME/bin:$PATH
 RUN echo 'PATH=$OCLINT_HOME/bin:$PATH' >> ~/.bashrc
 RUN apt-get update
 RUN apt-get install -y software-properties-common python-software-properties
