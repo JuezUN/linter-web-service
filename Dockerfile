@@ -79,6 +79,8 @@ RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.2.0/pmd-b
 RUN unzip pmd-bin-6.2.0.zip 
 
 RUN echo 'alias pmd="/pmd-bin-6.2.0/bin/run.sh pmd"' >> ~/.bashrc
+ENV PMD_HOME /pmd-bin-6.2.0
+ENV PATH $PMD_HOME/bin:$PATH
 
 # add webupd8 repository
 RUN \
