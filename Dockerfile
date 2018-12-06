@@ -118,6 +118,9 @@ RUN apt-get update
 RUN apt-get install -y -t unstable gcc-5
 RUN apt-get install -y clang
 
+#Pylint for python 2
+RUN apt-get install -y python-pip
+RUN python2 -m pip install pylint
 
 WORKDIR /usr/src/app
 
