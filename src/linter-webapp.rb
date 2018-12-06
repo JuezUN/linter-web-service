@@ -1,6 +1,6 @@
 require 'sinatra'
 require_relative 'linters/coala/java_linter'
-require_relative 'linters/coala/python_linter'
+require_relative 'linters/coala/python3_linter'
 require_relative 'linters/coala/cpp_linter'
 require_relative 'linters/coala/c_linter'
 
@@ -18,7 +18,7 @@ post "/java" do
 end
 
 post '/python' do
-  Coala::PythonLinter.new(params["code"]).perform_lint
+  Coala::Python3Linter.new(params["code"]).perform_lint
 end
 
 post '/c' do
