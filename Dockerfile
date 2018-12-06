@@ -75,11 +75,11 @@ RUN mkdir -p "$GEM_HOME" "$BUNDLE_BIN" \
 
 #install pmd java linter (coala dependency)
 
-RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.2.0/pmd-bin-6.2.0.zip 
-RUN unzip pmd-bin-6.2.0.zip 
+RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.4.1/pmd-bin-5.4.1.zip 
+RUN unzip pmd-bin-5.4.1.zip 
 
-RUN echo 'alias pmd="/pmd-bin-6.2.0/bin/run.sh pmd"' >> ~/.bashrc
-ENV PMD_HOME /pmd-bin-6.2.0
+RUN echo 'alias pmd="/pmd-bin-5.4.1/bin/run.sh pmd"' >> ~/.bashrc
+ENV PMD_HOME /pmd-bin-5.4.1
 ENV PATH $PMD_HOME/bin:$PATH
 
 # add webupd8 repository
