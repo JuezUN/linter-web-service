@@ -17,7 +17,7 @@ post "/java" do
   Coala::JavaLinter.new(params["code"]).perform_lint
 end
 
-post '/python' do
+post '/python3' do
   Coala::Python3Linter.new(params["code"]).perform_lint
 end
 
