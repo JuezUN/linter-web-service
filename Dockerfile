@@ -1,4 +1,4 @@
-FROM python:3.4.6
+FROM python:3.6-stretch
 
 #ruby installation, taken from the official ruby2.3 jessie Image which can be found on the following link
 #https://github.com/docker-library/ruby/blob/d3dc5a87e233dd19497cb6a0ce3933cd0340ce32/2.3/jessie/Dockerfile
@@ -13,18 +13,20 @@ ENV RUBY_VERSION 2.3.4
 ENV RUBY_DOWNLOAD_SHA256 341cd9032e9fd17c452ed8562a8d43f7e45bfe05e411d0d7d627751dd82c578c
 ENV RUBYGEMS_VERSION 2.6.12
 
-RUN apt-get update
-RUN apt-get install -y unzip
-
+# some of ruby's build scripts are written in ruby
+#   we purge system ruby later to make sure our final image uses what we just built
 RUN set -ex \
 	\
-	&& buildDeps=' \
+	&& buildDeps=" \
 		bison \
 		dpkg-dev \
 		libgdbm-dev \
+		# Old ruby isn't compatible with OpenSSL 1.1
+		libssl1.0-dev \
 		ruby \
-	' \
+	" \
 	&& apt-get update \
+	&& apt-get upgrade -y \
 	&& apt-get install -y --no-install-recommends $buildDeps \
 	&& rm -rf /var/lib/apt/lists/* \
 	\
@@ -37,6 +39,8 @@ RUN set -ex \
 	\
 	&& cd /usr/src/ruby \
 	\
+# hack in "ENABLE_PATH_CHECK" disabling to suppress:
+#   warning: Insecure world writable dir
 	&& { \
 		echo '#define ENABLE_PATH_CHECK 0'; \
 		echo; \
@@ -69,39 +73,21 @@ ENV BUNDLE_PATH="$GEM_HOME" \
 	BUNDLE_APP_CONFIG="$GEM_HOME"
 ENV PATH $BUNDLE_BIN:$PATH
 RUN mkdir -p "$GEM_HOME" "$BUNDLE_BIN" \
-&& chmod 777 "$GEM_HOME" "$BUNDLE_BIN"
+	&& chmod 777 "$GEM_HOME" "$BUNDLE_BIN"
 
 #end of ruby installation
 
 #install pmd java linter (coala dependency)
 
-RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.4.1/pmd-bin-5.4.1.zip 
-RUN unzip pmd-bin-5.4.1.zip 
+RUN wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.26.0/pmd-bin-6.26.0.zip
+RUN unzip pmd-bin-6.26.0.zip && rm pmd-bin-6.26.0.zip
 
-RUN echo 'alias pmd="/pmd-bin-5.4.1/bin/run.sh pmd"' >> ~/.bashrc
-ENV PMD_HOME /pmd-bin-5.4.1
+RUN echo 'alias pmd="/pmd-bin-6.26.0/bin/run.sh pmd"' >> ~/.bashrc
+ENV PMD_HOME /pmd-bin-6.26.0
 ENV PATH $PMD_HOME/bin:$PATH
 
-# add webupd8 repository
-RUN \
-    echo "===> add webupd8 repository..."  && \
-    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list  && \
-    echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list  && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886  && \
-    apt-get update  && \
-    \
-    \
-    echo "===> install Java"  && \
-    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections  && \
-    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections  && \
-    DEBIAN_FRONTEND=noninteractive  apt-get install -y --force-yes oracle-java8-installer oracle-java8-set-default  && \
-    \
-    \
-    echo "===> clean up..."  && \
-    rm -rf /var/cache/oracle-jdk8-installer  && \
-    apt-get clean  && \
-    rm -rf /var/lib/apt/lists/*
-
+# Install Java 8 for (Coala dependency)
+RUN apt-get update && apt-get install -y openjdk-8-jdk
 
 # install c++ oclinter (coala dependency)
 #RUN apt-get install subversion git cmake lcov libssl-dev
@@ -112,21 +98,18 @@ ENV OCLINT_HOME /oclint-release
 ENV PATH $OCLINT_HOME/bin:$PATH
 RUN echo 'PATH=$OCLINT_HOME/bin:$PATH' >> ~/.bashrc
 RUN apt-get update
-RUN apt-get install -y software-properties-common python-software-properties
+RUN apt-get install -y software-properties-common
 RUN echo 'deb http://ftp.us.debian.org/debian unstable main contrib non-free' >> /etc/apt/sources.list.d/unstable.list
 RUN apt-get update
-RUN apt-get install -y -t unstable gcc-5
-RUN apt-get install -y clang
-
-#Pylint for python 2
-RUN apt-get install -y python-pip
-RUN python2 -m pip install pylint
+RUN apt-get install -y -t unstable gcc-6
 
 WORKDIR /usr/src/app
 
-RUN gem install bundler
-
 COPY . .
+
+RUN gem install bundler
+RUN gem install sinatra
+RUN bundler install
 
 #install coala bears dependencies
 RUN pip3 install git+https://github.com/JuezUN/coala-bears.git --no-cache-dir
