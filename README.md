@@ -110,3 +110,6 @@ Project page: <https://juezun.github.io/UNCode_page/>
 [unjudge/linter-web-service_url]: https://hub.docker.com/r/unjudge/linter-web-service
 [sinatra_url]: http://sinatrarb.com/
 [virtual_env_url]: http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/
+[contributors_url]: https://github.com/JuezUN/INGInious-containers/graphs/contributors
+[issues_url]: https://github.com/JuezUN/INGInious-containers/issues
+[cla_url]: https://cla-assistant.io/JuezUN/INGInious-containers
