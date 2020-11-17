@@ -97,7 +97,7 @@ In case you want to host your course on our deployment, email us on: <uncode_fib
 
 UNCode: <https://uncode.unal.edu.co>
 
-Project page: <https://juezun.github.io/UNCode_page/>
+Project page: <https://juezun.github.io/>
 
 [license_url]: https://github.com/JuezUN/linter-web-service/blob/master/LICENSE
 [gitter_url]:https://gitter.im/uncode-unal/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
