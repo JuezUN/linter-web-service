@@ -102,7 +102,7 @@ Project page: <https://juezun.github.io/>
 [license_url]: https://github.com/JuezUN/linter-web-service/blob/master/LICENSE
 [gitter_url]:https://gitter.im/uncode-unal/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
 [uncode_wiki_url]: https://github.com/JuezUN/INGInious/wiki
-[project_url]: https://github.com/orgs/JuezUN/projects/3
+[project_url]: https://github.com/JuezUN/INGInious/issues
 [contributing_url]: https://github.com/JuezUN/linter-web-service/blob/master/CONTRIBUTING.md
 [coala_url]: https://coala.io
 [codacy_url]: https://www.codacy.com/gh/JuezUN/linter-web-service/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuezUN/linter-web-service&amp;utm_campaign=Badge_Grade
